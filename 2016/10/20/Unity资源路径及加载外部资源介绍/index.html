@@ -3,14 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>A Programmer</title>
+  <title>Unity资源路径及加载外部资源介绍 | A Programmer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="A Programmer">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="http://www.tuicool.com/articles/qMNnmm6http://simcai.com/2015/11/29/Unity%E8%B5%84%E6%BA%90%E8%B7%AF%E5%BE%84%E5%8F%8A%E5%8A%A0%E8%BD%BD%E5%A4%96%E9%83%A8%E8%B5%84%E6%BA%90%E4%BB%8B%E7%BB%8D/
+&amp;#x8865;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity资源路径及加载外部资源介绍">
+<meta property="og:url" content="http://yoursite.com/2016/10/20/Unity资源路径及加载外部资源介绍/index.html">
 <meta property="og:site_name" content="A Programmer">
+<meta property="og:description" content="http://www.tuicool.com/articles/qMNnmm6http://simcai.com/2015/11/29/Unity%E8%B5%84%E6%BA%90%E8%B7%AF%E5%BE%84%E5%8F%8A%E5%8A%A0%E8%BD%BD%E5%A4%96%E9%83%A8%E8%B5%84%E6%BA%90%E4%BB%8B%E7%BB%8D/
+&amp;#x8865;">
+<meta property="og:updated_time" content="2016-12-08T00:30:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="A Programmer">
+<meta name="twitter:title" content="Unity资源路径及加载外部资源介绍">
+<meta name="twitter:description" content="http://www.tuicool.com/articles/qMNnmm6http://simcai.com/2015/11/29/Unity%E8%B5%84%E6%BA%90%E8%B7%AF%E5%BE%84%E5%8F%8A%E5%8A%A0%E8%BD%BD%E5%A4%96%E9%83%A8%E8%B5%84%E6%BA%90%E4%BB%8B%E7%BB%8D/
+&amp;#x8865;">
   
     <link rel="alternate" href="/atom.xml" title="A Programmer" type="application/atom+xml">
   
@@ -59,56 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Unity_BuildAssetBundleOptions" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/20/Unity_BuildAssetBundleOptions/" class="article-date">
-  <time datetime="2016-10-20T12:01:34.000Z" itemprop="datePublished">2016-10-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/20/Unity_BuildAssetBundleOptions/">Unity_BuildAssetBundleOptions</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="&#x6253;&#x5305;&#x547D;&#x4EE4;&#x7684;&#x8BF4;&#x660E;"><a href="#&#x6253;&#x5305;&#x547D;&#x4EE4;&#x7684;&#x8BF4;&#x660E;" class="headerlink" title="&#x6253;&#x5305;&#x547D;&#x4EE4;&#x7684;&#x8BF4;&#x660E;"></a>&#x6253;&#x5305;&#x547D;&#x4EE4;&#x7684;&#x8BF4;&#x660E;</h2><p>&#x4EE5;&#x4E00;&#x4E2A;panel.prefab &#x4E3A;&#x4F8B;&#x5B50;&#x3002;</p>
-<p>&#x4F7F;&#x7528;&#x7684;Texture &#x7C7B;&#x578B;&#x4E3A;sprite&#xFF0C;&#x8BBE;&#x7F6E;&#x4E86;&#x56FE;&#x96C6;&#x3002;</p>
-<p>&#x5176;&#x4E2D; Background &#x65F6;UGUI&#x4E2D; Panel &#x81EA;&#x5E26;&#x7684;&#x80CC;&#x666F;&#xFF0C;<strong>&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x56FE;&#x96C6;</strong>&#x3002;</p>
-<p>loadingBar, loadingBarEffect&#x5C5E;&#x4E8E;&#x56FE;&#x96C6; Update.</p>
-<p>loadingTexture&#x5C5E;&#x4E8E;&#x56FE;&#x96C6;Update1&#x3002;<br>+&#x5C5E;&#x4E8E;&#x56FE;&#x96C6;UICommon2.</p>
-<h2 id="&#x901A;&#x8FC7;&#x5206;&#x6790;&#x56FE;&#x53EF;&#x77E5;&#xFF1A;"><a href="#&#x901A;&#x8FC7;&#x5206;&#x6790;&#x56FE;&#x53EF;&#x77E5;&#xFF1A;" class="headerlink" title="&#x901A;&#x8FC7;&#x5206;&#x6790;&#x56FE;&#x53EF;&#x77E5;&#xFF1A;"></a>&#x901A;&#x8FC7;&#x5206;&#x6790;&#x56FE;&#x53EF;&#x77E5;&#xFF1A;</h2><p>CollectDependencies&#x4F1A;&#x628A;&#x91CC;&#x9762;&#x7684;&#x7EC4;&#x4EF6; Image&#x4EE5;&#x53CA;&#x811A;&#x672C;&#x6253;&#x8FDB;&#x53BB;&#x3002;&#x800C;CompleteAssets&#x4F1A;&#x5C06; Panel &#x6D89;&#x53CA;&#x5230;&#x7684;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x4E5F;&#x6253;&#x8FDB;&#x53BB;&#x3002;<br>CollectDependencies&#x4F1A;&#x8BB2;&#x8BBE;&#x7F6E;&#x7684;&#x56FE;&#x96C6;&#x6253;&#x5305;&#x6210;&#x5927;&#x56FE;Texture&#xFF0C;&#x7136;&#x540E;&#x6253;&#x5230;&#x5305;&#x91CC;&#x9762;&#x3002;&#x800C;CompleteAssets&#x4F1A;&#x5728;&#x6B64;&#x57FA;&#x7840;&#x4E0A;&#x628A;&#x4F7F;&#x7528;&#x7684;Sprite&#x518D;&#x6B21;&#x6253;&#x6210; Texture &#x653E;&#x5728;&#x5305;&#x91CC;&#x9762;&#x3002;</p>
-<p>&#x4EE5;&#x4E0A;&#x4E24;&#x9879;&#x90FD;&#x4F1A;&#x628A;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x56FE;&#x96C6;&#x7684;sprite &#x518D;&#x6B21;&#x6253;&#x6210;Texture&#x3002;</p>
-<p>CompleteAssets&#x4E3B;&#x8981;&#x662F;&#x628A;&#x4F7F;&#x7528;&#x7684;Sprite&#x4E2D;&#x7684;&#x56FE;&#x6253;&#x6210;Texture&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x5426;&#x8BBE;&#x7F6E;&#x4E86;&#x56FE;&#x96C6;&#x3002;</p>
-<p>&#x4E0B;&#x56FE;&#x7684;&#x7ED3;&#x6784;&#x4E3A;&#x6253;&#x5305;&#x6210; StandaloneWindows &#x4E0B;&#xFF0C;&#x901A;&#x8FC7;&#x6D4B;&#x8BD5;&#x53EF;&#x77E5; &#x5728; iOS&#x4E0B;&#x7ED3;&#x6784;&#x540C;&#x6837;&#x3002;&#x90FD;&#x4E3A;&#x672A;&#x538B;&#x7F29;&#x60C5;&#x51B5;&#x4E0B;&#x3002;</p>
-<h3 id="BuildAssetBundleOptions-CompleteAssets"><a href="#BuildAssetBundleOptions-CompleteAssets" class="headerlink" title="BuildAssetBundleOptions.CompleteAssets"></a>BuildAssetBundleOptions.CompleteAssets</h3><p><img src="/2016/10/20/Unity_BuildAssetBundleOptions/CompleteAssets.png" alt="CompleteAssets"></p>
-<h3 id="BuildAssetBundleOptions-CollectDependencies"><a href="#BuildAssetBundleOptions-CollectDependencies" class="headerlink" title="BuildAssetBundleOptions.CollectDependencies"></a>BuildAssetBundleOptions.CollectDependencies</h3><p><img src="/2016/10/20/Unity_BuildAssetBundleOptions/CollectDependencies.png" alt="CollectDependencies"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/20/Unity_BuildAssetBundleOptions/" data-id="ciwfmawb20000yzuaqwso0c2i" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Unity资源路径及加载外部资源介绍" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Unity资源路径及加载外部资源介绍" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/10/20/Unity资源路径及加载外部资源介绍/" class="article-date">
   <time datetime="2016-10-20T12:01:34.000Z" itemprop="datePublished">2016-10-20</time>
@@ -121,8 +79,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/20/Unity资源路径及加载外部资源介绍/">Unity资源路径及加载外部资源介绍</a>
+    <h1 class="article-title" itemprop="name">
+      Unity资源路径及加载外部资源介绍
     </h1>
   
 
@@ -173,10 +131,23 @@
     </footer>
   </div>
   
-</article>
-
+    
+<nav id="article-nav">
+  
+    <a href="/2016/10/20/Unity_BuildAssetBundleOptions/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Unity_BuildAssetBundleOptions
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
+</article>
 
 </section>
         
